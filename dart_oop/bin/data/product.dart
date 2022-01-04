@@ -6,6 +6,10 @@ class Product {
   int? _getQuantity() {
     return _quantity;
   }
+
+  String toString(){
+    return 'Product { id = $id, name = $name, quantity = $_quantity}';
+  }
 }
 
 // the '_' or underscore within field can only be access inside of file. 
@@ -17,4 +21,6 @@ void main() {
     .._quantity = 2;
 
   print(product._getQuantity());
+  print(product.toString());
+  print(product);
 }
